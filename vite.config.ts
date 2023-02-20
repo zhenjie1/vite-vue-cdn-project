@@ -14,8 +14,9 @@ const externals = {
   'vue': 'Vue',
   'vue-router': 'VueRouter',
   'pinia': 'Pinia',
-  'naive-ui': 'naive',
+  'ant-design-vue': 'antd',
   'axios': 'axios',
+  'dayjs': 'dayjs',
   'vue-request': 'VueRequest',
 }
 // https://vitejs.dev/config/
@@ -41,7 +42,7 @@ export default defineConfig((options) => {
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: [
-          // 'vue',
+          'vue',
           'vue/macros',
           'vue-router',
         ],
