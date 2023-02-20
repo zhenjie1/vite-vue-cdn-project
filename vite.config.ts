@@ -3,6 +3,8 @@ import Vue from '@vitejs/plugin-vue'
 import externalGlobals from 'rollup-plugin-external-globals'
 import VueMacros from 'unplugin-vue-macros/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import {NaiveUiResolver} from 'unplugin-vue-components/resolvers'
 
 const externals = {
   'vue': 'Vue',
@@ -37,6 +39,16 @@ export default defineConfig({
       ],
       vueTemplate: true,
     }),
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      resolvers: [NaiveUiResolver()],
+      // allow auto load markdown components under `./src/components/`
+      extensions: ['vue', 'md'],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: true,
+    }),
+
   ],
 
   build: {

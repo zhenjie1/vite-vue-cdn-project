@@ -11,6 +11,8 @@ defineProps({
   <div class="containerBox">
     this is a home
     <p>{{ msg }}</p>
+
+    <n-input/>
   </div>
 </template>
 
