@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 defineProps({
   msg: {
     type: String,
     default: 'Vite + Vue',
   },
 })
+
+const value = ref()
 </script>
 
 <template>
@@ -12,7 +15,7 @@ defineProps({
     this is a home
     <p>{{ msg }}</p>
 
-    <n-input class="mt-10" />
+    <a-range-picker v-model:value="value" />
   </div>
 </template>
 
