@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { useRequest } from 'vue-request'
+import axios from 'axios'
+
+
+let user = () => axios.post('/user/12345')
+
+useRequest(user)
 </script>
 
 <template>
