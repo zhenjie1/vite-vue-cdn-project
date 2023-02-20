@@ -12,7 +12,7 @@ import 'uno.css'
 const routes = setupLayouts(generatedRoutes)
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
 })
 
 const app = createApp(App)
