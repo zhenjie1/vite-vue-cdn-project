@@ -1,0 +1,12 @@
+{
+  "extends": "@antfu",
+  "rules": {
+    "array-callback-return": "off",
+    "antfu/if-newline": "off",
+    "curly": [
+      "error",
+      "multi-line"
+    ],
+    "prefer-promise-reject-errors": "off"
+  }
+}

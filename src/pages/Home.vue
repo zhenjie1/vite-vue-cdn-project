@@ -2,8 +2,8 @@
 defineProps({
   msg: {
     type: String,
-    default: 'Vite + Vue'
-  }
+    default: 'Vite + Vue',
+  },
 })
 </script>
 
@@ -12,7 +12,7 @@ defineProps({
     this is a home
     <p>{{ msg }}</p>
 
-    <n-input class="mt-10"/>
+    <n-input class="mt-10" />
   </div>
 </template>
 
