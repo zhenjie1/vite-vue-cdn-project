@@ -6,6 +6,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {NaiveUiResolver} from 'unplugin-vue-components/resolvers'
 import Unocss from 'unocss/vite'
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 
 const externals = {
   'vue': 'Vue',
@@ -26,6 +28,13 @@ export default defineConfig({
         }),
       },
     }),
+    // https://github.com/hannoeru/vite-plugin-pages
+    Pages({
+      extensions: ['vue', 'md'],
+    }),
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
+
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
