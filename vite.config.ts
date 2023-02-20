@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
 import externalGlobals from 'rollup-plugin-external-globals'
+import VueMacros from 'unplugin-vue-macros/vite'
 
 const externals = {
   'vue': 'Vue',
@@ -13,7 +14,15 @@ const externals = {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    VueMacros({
+      plugins: {
+        vue: Vue({
+          include: [/\.vue$/, /\.md$/],
+          reactivityTransform: true,
+        }),
+      },
+    }),
+
   
   ],
 
