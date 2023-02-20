@@ -7,6 +7,7 @@ const externals = {
   'vue-router': 'VueRouter',
   'pinia': 'Pinia',
   'naive-ui': 'naive',
+  'axios': 'axios',
   'vue-request': 'VueRequest',
 }
 // https://vitejs.dev/config/
