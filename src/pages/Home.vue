@@ -12,7 +12,7 @@ defineProps({
     this is a home
     <p>{{ msg }}</p>
 
-    <n-input/>
+    <n-input class="mt-10"/>
   </div>
 </template>
 

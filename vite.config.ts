@@ -5,6 +5,7 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {NaiveUiResolver} from 'unplugin-vue-components/resolvers'
+import Unocss from 'unocss/vite'
 
 const externals = {
   'vue': 'Vue',
@@ -49,6 +50,7 @@ export default defineConfig({
       dts: true,
     }),
 
+    Unocss()
   ],
 
   build: {

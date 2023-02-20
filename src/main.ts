@@ -5,6 +5,7 @@ import './style.css'
 import App from './App.vue'
 import piniaInstall from './stores'
 
+import 'uno.css'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
