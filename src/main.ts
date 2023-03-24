@@ -2,6 +2,7 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Antd from 'ant-design-vue'
+import naive from 'naive-ui'
 import './style.css'
 import App from './App.vue'
 import piniaInstall from './stores'
@@ -18,6 +19,7 @@ const router = createRouter({
 const app = createApp(App)
 app.use(router)
 app.use(Antd)
+app.use(naive)
 piniaInstall(app)
 
 app.mount('#app')

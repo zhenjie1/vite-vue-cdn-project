@@ -16,12 +16,13 @@ useRequest(user)
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo">
     </a>
+    <!-- <n-button>123321</n-button> -->
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
 
-  <a-button>123321</a-button>
+  <n-input>123321</n-input>
   <RouterView v-slot="{ Component }">
     <a-config-provider :locale="zhCN">
       <component :is="Component" />

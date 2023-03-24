@@ -16,7 +16,7 @@ const externals = {
   'ant-design-vue': 'antd',
   'axios': 'axios',
   'dayjs': 'dayjs',
-  // 'naive-ui': 'naive',
+  'naive-ui': 'naive',
   'vue-request': 'VueRequest',
 }
 // https://vitejs.dev/config/
