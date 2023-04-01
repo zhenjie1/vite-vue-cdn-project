@@ -1,3 +1,4 @@
+import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import externalGlobals from 'rollup-plugin-external-globals'
@@ -28,7 +29,7 @@ export default defineConfig((options) => {
         plugins: {
           vue: Vue({
             include: [/\.vue$/],
-            reactivityTransform: true,
+            reactivityTransform: path.resolve(__dirname, './src'),
           }),
         },
       }),
