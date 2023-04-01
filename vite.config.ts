@@ -14,7 +14,7 @@ const externals = {
   'vue': 'Vue',
   'vue-router': 'VueRouter',
   'pinia': 'Pinia',
-  'naive-ui': 'naive',
+  'vant': 'vant',
   'axios': 'axios',
   'vue-request': 'VueRequest',
 }
