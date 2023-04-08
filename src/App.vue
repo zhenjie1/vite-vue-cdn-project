@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import zhCN from 'ant-design-vue/es/locale/zh_CN'
 import { useRequest } from 'vue-request'
 import axios from 'axios'
+import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
+dayjs.locale('zh-cn')
 
 const user = () => axios.post('/user/12345')
 
@@ -12,12 +16,18 @@ useRequest(user)
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo">
     </a>
+    <!-- <n-button>123321</n-button> -->
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <RouterView />
+
+  <n-input>123321</n-input>
+  <RouterView v-slot="{ Component }">
+    <a-config-provider :locale="zhCN">
+      <component :is="Component" />
+    </a-config-provider>
+  </RouterView>
 </template>
 
 <style scoped>
